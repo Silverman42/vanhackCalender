@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Niramit:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="calender.css">
+</head>
+
+<body>
+    <div class="modal_container" data-show="false" id="modal">
+        <div class="modal">
+            <a href="#" class="modal_back-button" id="close_modal">&#8701;</a>
+            <div class="modal_header">Events</div>
+            <div class="modal_body">
+                <div class="event_list-view" id="event_list-view" data-show="true">
+                    <button class="button new_event-switch">
+                        Create New Event
+                    </button>
+                    <div class="event_container">
+                    </div>
+                    <div class="no_event-card" id="no_event_info" data-show="false">
+                        <h4 class="header">No Event</h6>
+                    </div>
+                </div>
+                <fieldset data-show="true" id="update_event-fieldset">
+                    <div class="button-container">
+                        <button class='button is-outlined event_view-switch'>
+                            View Events
+                        </button>
+                        <button class='button is-outlined new_event-switch'>
+                            Create Events
+                        </button>
+                    </div>
+                    <legend>Update Event</legend>
+
+                    <form action="" id="update_event-form">
+                        <div>
+                            <label for="event_name">Name</label>
+                            <input type="text" name="" id="event_name" required maxlength="80">
+                        </div>
+                        <div>
+                            <label for="event_desc">Description</label>
+                            <textarea name="" id="event_desc" cols="30" rows="5" required maxlength="200"></textarea>
+                        </div>
+                        <div>
+                            <label for="event_time">Time</label>
+                            <input type="time" name="" id="event_time" required>
+                        </div>
+                        <button class="button" type="submit">Update Event</button>
+                    </form>
+                </fieldset>
+                <fieldset id="new_event-fieldset">
+                    <button class='button is-outlined event_view-switch'>
+                        View Events
+                    </button>
+                    <legend>New Event</legend>
+
+                    <form action="" id="create_event-form">
+                        <div>
+                            <label for="event_name">Name</label>
+                            <input type="text" name="" id="event_name" required maxlength="80">
+                        </div>
+                        <div>
+                            <label for="event_desc">Description</label>
+                            <textarea name="" id="event_desc" cols="30" rows="5" required maxlength="200"></textarea>
+                        </div>
+                        <div>
+                            <label for="event_time">Time</label>
+                            <input type="time" name="" id="event_time" required>
+                        </div>
+                        <button class="button" type="submit">Create New Event</button>
+                    </form>
+                </fieldset>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--Navigation-->
+        <a href="#" class="navigation" id="previous_date">
+            &#8701;
+        </a>
+        <div class="navigation" id="calender_head">
+            July 2019
+        </div>
+        <a href="#" class="navigation" id="next_date">
+            &#8702;
+        </a>
+        <!--Weeks-->
+        <div class="weeks">
+            S
+        </div>
+        <div class="weeks">
+            M
+        </div>
+        <div class="weeks">
+            T
+        </div>
+        <div class="weeks">
+            W
+        </div>
+        <div class="weeks">
+            TH
+        </div>
+        <div class="weeks">
+            F
+        </div>
+        <div class="weeks">
+            SA
+        </div>
+        <!--Days-->
+        <div class="days_container" id="days_container">
+
+        </div>
+        <footer class="calender_footer">
+            This calender makes use of the browser's local storage to save calender dates with their respective events. You can <a href="#" id="clear_storage">Clear the Local Storage</a> to save memory
+        </footer>
+    </div>
+</body>
+<script src="calender.js"></script>
+
+</html>
