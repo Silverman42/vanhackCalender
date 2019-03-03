@@ -1,0 +1,6 @@
+# Vanhack calenda app
+A calendar app created for vanhack Javascript code challenge 
+## Features
+- Event/Appointment creation for different dates
+- Auto save of events/appointment in local Storage
+- Multiple event/appointment overlap detection
